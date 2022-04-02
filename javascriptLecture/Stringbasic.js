@@ -23,3 +23,10 @@ console.log(typeof 'how\'re you?')
  *  \\ -> \
  * 
  */
+
+// 문자열 합치기 및 연산
+console.log('바나나' + '사과')      // 바나나사과
+console.log('바나나' - '사과')      // NaN
+console.log('바나나' * '사과')      // NaN
+console.log('바나나' / '사과')      // NaN
+console.log('바나나' % '사과')      // NaN
