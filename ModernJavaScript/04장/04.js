@@ -20,3 +20,8 @@ console.log(user.name);
 console.log(users[0].id);
 console.log(users[0].name);
 
+// 헝가리언 케이스(typeHungrianCase)
+var strFirstName;
+var $elem = document.getElementById('myId'); // DOM 노드
+var observable$ = fromEvent(document, 'click') // RxJS 옵저버블
+
