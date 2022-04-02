@@ -1,3 +1,4 @@
+// 여러가지 변수 선언 법
 var userId = 1;
 var userName = 'Lee';
 
