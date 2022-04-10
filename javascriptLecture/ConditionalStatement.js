@@ -47,9 +47,35 @@ if (score > 90) {
 } else if (score <= 69 && score >= 60) {
     console.log('B');
 } else if (score <= 59 && score >= 50) {
-    console.log('C+')
+    console.log('C+');
 } else if (score <= 49 && score >= 40) {
-    console.log('D')
+    console.log('D');
 } else {
-    console.log('F')
+    console.log('F');
+}
+
+// 중첩 if 문
+let first = true;
+let second = false;
+if (first) {
+    console.log('첫 번째 조건 충족!');
+    if (second) {
+        console.log('두 번째 조건도 충족!');
+    } else {
+        console.log('두 번째 조건은 불충족!');
+    }
+} else {
+    console.log('첫 번째 조건 불충족!');
+}
+
+let first2 = true;
+let second2 = false;
+if (first2 && second2) {
+    console.log('첫 번째 조건 충족!');
+    console.log('두 번째 조건도 충족');
+} else if (first2) {
+    console.log('첫 번째 조건 충족!');
+    console.log('두 번째 조건은 불충족');
+} else {
+    console.log('첫 번째 조건 불충족!');
 }
