@@ -67,3 +67,62 @@ for (let i = 0; i < 10; i++) {
     console.log(' '.repeat(m) + '*'.repeat(i));
     m--;
 }
+
+let star = '';
+for (let i = 0; i < 10; i++) {
+    for (let j = 0; j <= i; j++) {
+        star += '*';
+    }
+    star += '\n';
+}
+console.log(star)
+
+let star1 = '';
+let m1 = 4;
+for (let i = 0; i < 10; i++) {
+    if (i % 2 != 0) {
+        star1 += ' '.repeat(m1);
+        
+        for (let j = 1; j <= i; j++) {
+            star1 += '*';
+        }
+    
+        star1 += '\n'
+        m1--;
+    }
+}
+console.log(star1);
+
+let star2 = '';
+for (let i = 0; i < 5; i++) {
+    for (let j = 4; j > i; j--) {
+        star2 += ' ';
+    }
+    for (let k = 0; k <= (i * 2); k++) {
+        star2 += '*';
+    }
+    star2 += "\n";
+}
+console.log(star2);
+
+let star3 = '';
+for (let i = 0; i < 9; i++) {
+    if (i < 5) {
+        for (let j = 4; j > i; j--) {
+            star3 += ' ';
+        }
+        for (let k = 0; k <= (i * 2); k++) {
+            star3 += '*';
+        }
+    } else {
+        for (let l = 5; l <= i; l++) {
+            star3 += ' ';
+        }
+        for (let n = 17; n > i * 2; n--) {
+            star3 += '*';
+        }
+    }
+    
+    star3 += "\n";
+}
+console.log(star3);
