@@ -115,7 +115,7 @@ for (let i = 0; i < 9; i++) {
             star3 += '*';
         }
     } else {
-        for (let l = 5; l <= i; l++) {
+        for (let l = 4; l < i; l++) {
             star3 += ' ';
         }
         for (let n = 17; n > i * 2; n--) {
