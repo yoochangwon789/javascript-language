@@ -37,3 +37,51 @@ console.log(target);
 // 배열 가장 앞의 요소 추가
 target.unshift(0);
 console.log(target);
+
+// 배열 에서 마지막 요소 제거
+target.pop();
+console.log(target);
+
+// 배열에서 첫 번째 요소 제거
+target.shift();
+console.log(target);
+
+// 중간 요소 제거
+// splice(1, 1) 처음 파라미터는 인덱스 값, 두 번째 파라미터는 선택된 인덱스로부터 몇개를 지울 것인가. 1 이므로 선택된 인덱스를 포함한 1개를 지운다.
+target.splice(1, 1);
+console.log(target);
+
+target.splice(1, 2);
+console.log(target);
+
+// 첫 번째 파라미터만 대입하면 인덱스를 포함한 끝까지 삭제한다.
+target.splice(1);
+console.log(target);
+
+// splice 를 이용해서 지정한 값들을 지우고 그 뒤에 파라미터의 내가 넣고싶은 값을 넣으면 지워진 값들 사이에 값을 넣을 수 있다.
+const target2 = ['가', '나', '다', '라', '마', '바'];
+target2.splice(1, 3, '타', '파');
+console.log(target2);
+
+// 한개도 안지우고 값을 끼워넣을 수 있다.
+target2.splice(2, 0, '하');
+console.log(target2);
+
+// includes() 함수를 이용해서 값 찾기 있으면 true 없으면 false
+const value = ['가', '나', '다', '라', '마'];
+const result1 = value.includes('다');
+const reuslt2 = value.includes('하');
+console.log(result1, reuslt2);
+
+// 값이 몇 번째 index 의 값인지 확인할 수 있다. indesOf 와 lastIndesOf 기능
+const valueIndex = [2, 2, 3, 4, 5, 7, 8, 9, 3];
+const indexResult1 = valueIndex.indexOf(3); // 가장 앞에서 가까운 요소를 반환
+const indexResult2 = valueIndex.lastIndexOf(3); // 가장 뒤에서부터 찾음
+const indexReuult3 = valueIndex.indexOf('가') // 값 없으면 -1 반환
+console.log(indexResult1, indexResult2, indexReuult3);
+
+let i = 0
+while (i < valueIndex.length) {
+    console.log('valueIndex['+ i +'] : ' + valueIndex[i]);
+    i++;
+}
