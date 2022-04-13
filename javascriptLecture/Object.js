@@ -85,3 +85,36 @@ while (i < valueIndex.length) {
     console.log('valueIndex['+ i +'] : ' + valueIndex[i]);
     i++;
 }
+
+// '라' 제거하기 index, splice 만 사용
+const raArray1 = ['가', '라', '다', '라', '마', '라'];
+// raArray.indexOf('라');
+// raArray.splice(1, 1);
+// console.log(raArray);
+// raArray.indexOf('라');
+// raArray.splice(2, 1);
+// console.log(raArray);
+// raArray.indexOf('라');
+// raArray.splice(3, 1);
+// console.log(raArray);
+
+while (raArray1.indexOf('라') > -1) {
+    raArray1.splice(raArray.indexOf('라'), 1);
+}
+console.log(raArray1);
+
+const raArray2 = ['가', '라', '다', '라', '마', '라'];
+let index = raArray2.indexOf('라');
+while (index > -1) {
+    raArray2.splice(index, 1);
+    index = raArray2.indexOf('라');
+}
+console.log(raArray2);
+
+const raArray3 = ['가', '라', '다', '라', '마', '라'];
+for (let i = 0; i < raArray3.length; i++) {
+    if (raArray3[i] === '라') {
+        raArray3.splice(i, 1);
+    }
+}
+console.log(raArray3);
