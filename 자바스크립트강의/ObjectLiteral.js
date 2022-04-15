@@ -40,3 +40,34 @@ const debug = {
     },
 };
 debug.log('Hello, method');
+
+
+// 객체 간의 비교
+// 객체 끼리 비교하면 무조건 false
+console.log({} === {});
+
+// 하지만 객체인지 비교하고 싶다면 기존 객체를 변수에 저장해 두어야 한다.
+// a 의 객체를 한번만 쓰고 돌려서 썻기 때문에 true
+// {} 을 사용하는 순간 새로운 객체가 생성되므로 절대 같을 수 없다.
+const a = {
+    name: 'changwon'
+}
+const array2 = [1, 2, a];
+console.log(a === array2[2]);
+
+const a1 = {
+    name: 'changwon'
+}
+const b1 = a1;
+console.log(a1 === b1, b1.name);
+
+// '유' 의 접근하려면 어떻게 해야하는가
+const changwon1 = {
+    name: {
+        first: '창원',
+        last: '유',
+    },
+    gender: 'm',
+};
+console.log(changwon1.name.last);
+console.log(changwon1['name']['last']);
